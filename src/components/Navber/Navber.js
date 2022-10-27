@@ -1,21 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { MdSearch } from 'react-icons/md';
 import { FaRegBell } from 'react-icons/fa';
+import dummyImg from '../../images/dummy.png'
 const Navber = () => { 
+  const [open, setopen] = useState(false)
   return ( 
-    <div className="navbar bg-def">
-    <div className="navbar-start">
+    <div className=''>
+    <div className="navbar bg-def  w-full overflow-hidden">
+    <div className="navbar-start ">
      
-      <a className="text-white capitalize pl-3 text-2xl">project monitoring & evaluation system</a>
+      <a className="text-white main_head capitalize pl-3 md:text-xl lg:text-2xl">project monitoring & evaluation system</a>
     </div>
    
     <div className="navbar-end">
-      <button className="btn bg-def hover:bg-white duration-500 border-white ">
-    About us
-      </button>
-      <button className="btn bg-def hover:bg-white duration-500 border-white ml-2">
-      Abbrivation
-      </button>
+      
+   
+
+      
       <button className="btn btn-ghost btn-circle">
       <MdSearch className="text-white text-xl"/>
       </button>
@@ -25,10 +26,10 @@ const Navber = () => {
       <div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-          <img src="https://placeimg.com/80/80/people" />
+          <img src={dummyImg} />
         </div>
       </label>
-      <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+      <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box z-40 w-52">
         <li>
           <a className="justify-between">
             Profile
@@ -38,6 +39,7 @@ const Navber = () => {
         <li><a>Settings</a></li>
         <li><a>Logout</a></li>
       </ul>
+    </div>
     </div>
     </div>
   </div>
