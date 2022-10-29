@@ -33,7 +33,7 @@ const ProjectTable = () => {
         </th>
         <th>1</th>
         <td className='text-[14px] '>W-o7/LAL</td>
-        <td className='w-[23rem] text-[14px]'>Improvement and Construction of Raj Narayan Dhar Road, Kazi Riazuddin Road and Street Around Shaheed Nagar CC Road</td>
+        <td className='w-[23rem] table_text text-[14px]'>Improvement and Construction of Raj Narayan Dhar Road, Kazi Riazuddin Road and Street Around Shaheed Nagar CC Road</td>
         <td className='text-[14px] w-[10rem] '>RND, KRU, SASN Roads</td>
         <td className='text-[14px]'>1425.00</td>
         <td className='text-[14px]'>1425.00</td>

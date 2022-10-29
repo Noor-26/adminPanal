@@ -93,7 +93,7 @@ const Activity = () => {
         <h4 className="font-semibold ">Activity 7: Sub Project Implementation</h4>
         
      
-        {isOpened ?  <IoIosArrowDown /> :<IoIosArrowUp />}
+        {isOpened ?  <IoIosArrowDown /> :<IoIosArrowForward />}
       </div>
       <div
         style={{ height: height }}

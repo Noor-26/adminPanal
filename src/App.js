@@ -14,6 +14,8 @@ import SubProjectPlanning from './components/Contents/SubProjects/SubProjectPlan
 import PresentStMl from './components/Contents/PresentStatus&Milestone/PresentStMl';
 import DEDProgress from './components/Contents/DEDProgress/DEDProgress';
 import SBDProgress from './components/Contents/SBDProgress/SBDProgress';
+import SBDProgressList from './components/Contents/SBDProgress/SBDProgressList/SBDProgressList';
+import DEDProgressList from './components/Contents/DEDProgress/DEDProgressList/DEDProgressList';
 
 function App() {
   
@@ -33,7 +35,9 @@ function App() {
               <Route path='sparprogresslist' element={<SparProgressList/>} />
               <Route path='sparprogressentry-update' element={<SparProgressEntry_update/>} />
               <Route path='dedprogress' element={<DEDProgress/>} />
+              <Route path='dedprogresslist' element={<DEDProgressList/>} />
               <Route path='sbdprogress' element={<SBDProgress/>} />
+              <Route path='sbdprogresslist' element={<SBDProgressList/>} />
               <Route path='activity' element={<Activity/>} />
               <Route path='manualmeworksheet' element={<Manualworksheet/>} />
               <Route path='presentstatus&milestone' element={<PresentStMl/>} />

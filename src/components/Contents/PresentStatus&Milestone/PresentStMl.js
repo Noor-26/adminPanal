@@ -7,19 +7,24 @@ import PresentStatusTable from './StatusTable/PresentStatusTable'
 const PresentStMl = () => {
   return (
     <div>
-            <div className='flex justify-between py-2 px-4 '>
+            
+ <div className='flex justify-between py-2 px-4 mt-2 '>
         <div className='flex'>
         <div className="avatar">
-  <div className="w-12 rounded">
-    <img src={phoneImg} />  
+  <div className="w-[41px] rounded-md py-1">
+    <img src={phoneImg} />
   </div>
 </div>
 <div className='ml-2'>
-    <p className="font-semibold capitalize text-[#165DC5]">present status and milestones</p>
-    <p className='text-[14px] capitalize  text-[#959298]'>page instructions</p>
+    <p className="font-semibold capitalize text-[20px] text-[#165DC5]">present status and milestones</p>
+    <p className='text-[14px] capitalize text-[#959298]'>page instructions</p>
 </div>
         </div>
-        <Link to="/subprojectlist" ><button className=" bg-btn_def border-none hover:bg-btn_def py-2 px-8 uppercase text-white rounded text-[15px] flex items-center"> <span className='py-1 px-2 mr-2 rounded relative right-[5px] text-center mx-auto bg-white '><CgPlayListCheck className="text-[22px] bg-white mx-auto relative left-[2px] text-center text-btn_def  font-bold "/> </span> Sub Project list </button></Link>
+
+        <Link to="/subprojectlist" >
+        <button className=" bg-btn_def border-none hover:bg-btn_def py-2 pr-8 uppercase text-white rounded-md text-[15px] flex items-center"> <span className='py-1 px-2 mx-4 rounded relative  text-center  bg-white '><CgPlayListCheck className="text-[22px] bg-white mx-auto relative left-[2px] text-center text-btn_def  font-bold "/> </span> Sub Project list </button>
+          </Link>
+     
         </div>
 
         <div className="card mt-8 card-compact border w-full bg-base-100 p-4 shadow rounded-md">

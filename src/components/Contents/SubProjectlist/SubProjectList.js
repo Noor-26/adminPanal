@@ -9,7 +9,7 @@ import { AiOutlinePrinter } from 'react-icons/ai';
 
 const SubProjectList = () => {
   return (
-    <div>
+    <div className='w-full'>
          <div className='flex justify-between py-2 px-4 mt-2 '>
         <div className='flex'>
         <div className="avatar">
@@ -23,9 +23,9 @@ const SubProjectList = () => {
 </div>
         </div>
 
-        <Link to="/createnew" ><button className=" bg-btn_def border-none hover:bg-btn_def py-2 px-8 uppercase text-white rounded text-[15px] flex items-center"> <span className='py-2 pl-2 mr-2 rounded relative right-[5px] text-center mx-auto bg-white '><HiPlus className="text-[18px] bg-white mx-auto text-center text-btn_def  font-bold mr-2"/> </span> Create new sub project </button></Link>
+        <Link to="/createnew" ><button className=" bg-btn_def border-none hover:bg-btn_def py-2 px-4 uppercase text-white rounded-md text-[15px] flex items-center"> <span className='py-2 pl-2 mr-2 rounded relative right-[5px] text-center mx-auto bg-white '><HiPlus className="text-[18px] bg-white mx-auto text-center text-btn_def  font-bold mr-2"/> </span> Create new sub project </button></Link>
         </div>
-        <div className="card rounded h-[73vh] mt-8 card-compact border w-full bg-base-100 p-0 shadow ">
+        <div className="card rounded h-[73vh] overflow-y-scroll mt-8 card-compact border w-full bg-base-100 p-0 shadow ">
           <div className='flex justify-between p-4'>
               <div className="flex ">
                 <button className='font-semibold uppercase ml-2 bg-[#f0f1ff]  border-none rounded text-btn_def py-2 hover:bg-btn_def hover:text-white px-4 flex items-center text-[14px]'><CiExport className="text-[20px] font-bolder mr-2"/>  Export to excel</button>

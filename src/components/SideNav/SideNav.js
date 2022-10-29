@@ -9,7 +9,7 @@ import { SlHome } from 'react-icons/sl';
 import { FiActivity } from 'react-icons/fi';
 import { GoGraph } from 'react-icons/go';
 import { HiOutlineArrowTrendingUp } from 'react-icons/hi2'; 
-import { IoIosArrowUp,IoIosArrowDown } from 'react-icons/io'; 
+import { IoIosArrowForward,IoIosArrowDown } from 'react-icons/io'; 
 
 // importing images 
 import planImg from '../../images/plan.png'
@@ -94,7 +94,7 @@ const SideNav = () => {
       </Link>
 
           {/* Sidenav routes */}
-<div className='h-[88vh] sideNav_manu overflow-y-scroll'>
+<div className='h-[80vh] sideNav_manu overflow-y-scroll'>
       <ul className="pt-6">
       
         <Link to="/">
@@ -171,7 +171,7 @@ const SideNav = () => {
     </div>
     <div className={` ${!open && "hidden"}  text-end`}>
     
-    {isOpened2 ? < IoIosArrowDown/> :  < IoIosArrowUp/>}
+    {isOpened2 ? < IoIosArrowDown/> :  < IoIosArrowForward/>}
     </div>
   </div>
   <div 
@@ -179,9 +179,9 @@ const SideNav = () => {
     className=" overflow-hidden my-2 transition-all duration-500"
   >
    <ul>
-    <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 pl-3 ml-2`}> <Link to="/sparprogressentry-update">SPAR Progress</Link> </li>
-    <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 mt-2 pl-3 ml-2`}> <Link to="/dedprogress"> DED Progress </Link></li>
-    <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 mt-2 pl-3 ml-2`}> <Link to="/sbdprogress">  SBD / BOQ  Progress </Link></li>
+    <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 pl-3 ml-2`}> <Link to="/sparprogresslist">SPAR Progress</Link> </li>
+    <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 mt-2 pl-3 ml-2`}> <Link to="/dedprogresslist"> DED Progress </Link></li>
+    <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 mt-2 pl-3 ml-2`}> <Link to="/sbdprogresslist">  SBD / BOQ  Progress </Link></li>
     <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 mt-2 pl-3 ml-2`}>Procurement Progress</li>
     <li className={`${!open && "hidden"} origin-left duration-200 text-[14px]  border-l-2 mt-2 pl-3 ml-2`}>Contract Progress</li>
     <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 mt-2 pl-3 ml-2`}>Constraction Progress</li>
@@ -202,7 +202,7 @@ const SideNav = () => {
     </div>
     <div className={` ${!open && "hidden"}  text-end`}>
     
-    {isOpened3 ? < IoIosArrowDown/> :  <IoIosArrowUp />}
+    {isOpened3 ? < IoIosArrowDown/> :  <IoIosArrowForward />}
     </div>
   </div>
   <div 
@@ -213,7 +213,7 @@ const SideNav = () => {
     <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] mt-2  border-l-2 pl-3 ml-2`}> <Link to="/presentstatus&milestone">Present Status & Milestone</Link> </li>
     <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 mt-2  pl-3 ml-2`}> <Link to="/sparprogresslist">SP Activities Status</Link> </li>
     <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 mt-2 pl-3 ml-2`}> <Link to="/manualmeworksheet"> Integrated M & E Workplan </Link></li>
-    <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 mt-2 pl-3 ml-2`}> <Link to="/manualmeworksheet">  SBD / BOQ  Progress </Link></li>
+    <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 mt-2 pl-3 ml-2`}> <Link to="/manualmeworksheet"> Other Reports</Link></li>
    
    </ul>
 
@@ -229,7 +229,7 @@ const SideNav = () => {
     </div>
     <div className={` ${!open && "hidden"}  text-end`}>
     
-    {isOpened4 ? < IoIosArrowDown/> :  <IoIosArrowUp />}
+    {isOpened4 ? < IoIosArrowDown/> :  <IoIosArrowForward />}
     </div>
   </div>
   <div 
@@ -257,7 +257,7 @@ const SideNav = () => {
     </div>
     <div className={` ${!open && "hidden"}  text-end`}>
     
-    {isOpened5 ? < IoIosArrowDown/> :  <IoIosArrowUp />}
+    {isOpened5 ? < IoIosArrowDown/> :  <IoIosArrowForward />}
     </div>
   </div>
   <div 

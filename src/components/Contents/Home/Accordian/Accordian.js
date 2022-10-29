@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react"
 import { GrSearch } from 'react-icons/gr';
-import { IoIosArrowUp,IoIosArrowDown } from 'react-icons/io';
+import { IoIosArrowForward,IoIosArrowDown } from 'react-icons/io';
 import {FaExpand} from 'react-icons/fa';
 import {SlReload} from 'react-icons/sl';
 import Card from "./Card";
@@ -15,10 +15,10 @@ const Accordian = () => {
     const [height2, setHeight2] = useState("0px")
     const HandleOpening2 = () => {
         setOpened2(!isOpened2)
-        setHeight2(!isOpened2 ? "0px" : `70vh`) 
+        setHeight2(!isOpened2 ? "0px" : `50vh`) 
       } 
   return (
-    <div>
+    <div className="h-[75vh] overflow-y-scroll">
 
     <div  className="border  duration-200">
       <div onClick={HandleOpening} className="bg-[#F4F5FA] cursor-pointer p-4 flex  justify-between  ">
@@ -27,7 +27,7 @@ const Accordian = () => {
           {/* <AiOutlineCompress/> if open */}
         <SlReload className="font-bold"/>
         <FaExpand/>
-        {isOpened ?  <IoIosArrowDown /> :<IoIosArrowUp />}
+        {isOpened ?  <IoIosArrowDown /> :<IoIosArrowForward />}
         </div>
       </div>
       <div
@@ -69,7 +69,7 @@ const Accordian = () => {
     <div  className="border mt-3  duration-200">
       <div onClick={HandleOpening2} className="bg-[#F4F5FA] cursor-pointer p-4 flex  justify-between  ">
         <h4 className="font-semibold">Recent Update</h4>
-        {isOpened2 ? <IoIosArrowUp /> : <IoIosArrowDown />}
+        {isOpened2 ? <IoIosArrowForward /> : <IoIosArrowDown />}
       </div>
       <div
         style={{ height: height2 }}

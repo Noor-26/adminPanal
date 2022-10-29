@@ -27,9 +27,13 @@ const AddNewSubProject = () => {
     <p className='text-[14px] capitalize text-[#959298]'>Most asked questions</p>
 </div>
         </div>
-        <Link to="/subprojectlist" ><button className=" bg-btn_def border-none hover:bg-btn_def py-2 px-8 uppercase text-white rounded text-[15px] flex items-center"> <span className='py-2 px-2 mr-2 rounded relative right-[5px] text-center mx-auto bg-white '><CgPlayListCheck className="text-[22px] bg-white mx-auto text-center text-btn_def  font-bold "/> </span> Sub Project list </button></Link>
+        <Link to="/subprojectlist" >
+        <button className=" bg-btn_def border-none hover:bg-btn_def py-2 pr-8 uppercase text-white rounded-md text-[15px] flex items-center"> <span className='py-1 px-2 mx-4 rounded relative  text-center  bg-white '><CgPlayListCheck className="text-[22px] bg-white mx-auto relative left-[2px] text-center text-btn_def  font-bold "/> </span> Sub Project list </button>
+          </Link>
+        
        
         </div>
+        <div className='h-[75vh] overflow-y-scroll'>
         <div className="card  rounded-md mt-8 card-compact border w-full bg-base-100 p-4 shadow ">
           <p className='font-bold'>Sub Project Detail</p>
           <div className='flex justify-between'>
@@ -48,20 +52,28 @@ const AddNewSubProject = () => {
   </label>
   <label className="input-group border ">
   
-    <input type="text" placeholder=" Enter Sub Project Name" className="input  w-[58vw] focus:outline-none" />
+    <input type="text" placeholder=" Enter Sub Project Name" className="input  w-[59vw] focus:outline-none" />
   </label>
 </div>
           </div>
           <div className='flex justify-between mt-2'>
           <div className="form-control  ">
           <label className="label">
-    <span className="label-text">Ward No.</span>
+    <span className="label-text">SP Short Name</span>
   </label>
   <label className="input-group border ">
-    <input type="text" placeholder=" Enter ward number" className="input  w-[20vw] focus:outline-none" />
+    <input type="text" placeholder="Enter SP Short Name" className="input  w-[20vw] focus:outline-none" />
   </label>
 </div>
     <div className='flex items-center'>
+          <div className="form-control  ">
+          <label className="label">
+    <span className="label-text">Ward No.</span>
+  </label>
+  <label className="input-group border ">
+    <input type="text" placeholder="Enter ward no" className="input  w-[10vw] focus:outline-none" />
+  </label>
+</div>
 
               <div className="form-control                                                                                   ">
               <label className="label">
@@ -69,12 +81,12 @@ const AddNewSubProject = () => {
   </label>
   <label className="input-group border ">
   
-    <input type="text" placeholder=" Enter Project Area" className="input  w-[24vw] focus:outline-none" />
+    <input type="text" placeholder=" Enter Project Area" className="input  w-[15vw] focus:outline-none" />
   </label>
 </div>
 <div className="form-control border relative top-[18px]">
 <select className="select w-[150px] focus:outline-none">
-  <option disabled selected>SAT</option>
+  <option disabled selected>Select</option>
   <option>Homer</option>
   <option>Marge</option> 
   <option>Bart</option>
@@ -115,7 +127,8 @@ const AddNewSubProject = () => {
     <span className="label-text">Location Description</span>
   </label>
   <label className="input-group border ">
-    <input type="text" placeholder=" Enter Location Description" className="input  w-full focus:outline-none" />
+ 
+    <textarea name="location" rows="5" placeholder=" Enter Location Description" className='focus:outline-none w-full p-2'></textarea>
   </label>
 </div>
 </div>
@@ -128,7 +141,7 @@ const AddNewSubProject = () => {
   </label>
   <label className="input-group">
     <span>BDT</span>
-    <input type="text" placeholder=" Enter Package Name" className="input input-bordered focus:outline-none" />
+    <input type="text" placeholder=" Enter Estimated Cost (DPP)" className="input input-bordered focus:outline-none" />
   </label>
 </div>
 <div className="form-control ml-4">
@@ -137,7 +150,7 @@ const AddNewSubProject = () => {
   </label>
   <label className="input-group">
     <span>BDT</span>
-    <input type="text" placeholder=" Enter Package Name" className="input input-bordered focus:outline-none" />
+    <input type="text" placeholder=" Enter Estimated Cost (SPAR)" className="input input-bordered focus:outline-none" />
   </label>
 </div>
 <div className="form-control ml-4">
@@ -146,7 +159,7 @@ const AddNewSubProject = () => {
   </label>
   <label className="input-group">
     <span>BDT</span>
-    <input type="text" placeholder=" Enter Package Name" className="input input-bordered focus:outline-none" />
+    <input type="text" placeholder=" Enter Estimated Cost (SBD)" className="input input-bordered focus:outline-none" />
   </label>
 </div>
  
@@ -157,6 +170,7 @@ const AddNewSubProject = () => {
 <ReviesedModal/>
 <CreateNewStatusModal/> 
 <button  className=" bg-btn_def border-none hover:bg-btn_def py-2 px-10 my-3 uppercase text-white rounded text-[15px] flex items-center">save</button>
+</div>
     </div>
   )
 }

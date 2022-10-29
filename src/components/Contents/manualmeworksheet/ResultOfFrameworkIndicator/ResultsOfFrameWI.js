@@ -40,7 +40,7 @@ const ResultsOfFrameWI = () => {
         <h4 className="font-semibold tracking-[0.15px] text-[18px] text-acc_head">PROJECTS DEVELOPMENT INDICATORS</h4>
      
 
-        {isOpened ?  <IoIosArrowDown /> :<IoIosArrowUp />}
+        {isOpened ?  <IoIosArrowDown /> :<IoIosArrowForward />}
     
       </div>
       <div
@@ -170,7 +170,7 @@ const ResultsOfFrameWI = () => {
         <h4 className="font-semibold tracking-[0.15px] text-[18px] text-acc_head">INTERMEDIATE INDICATORS</h4>
      
 
-        {isOpened3 ?  <IoIosArrowDown /> :<IoIosArrowUp />}
+        {isOpened3 ?  <IoIosArrowDown /> :<IoIosArrowForward />}
     
       </div>
       <div

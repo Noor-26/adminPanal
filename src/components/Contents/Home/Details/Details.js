@@ -36,41 +36,41 @@ const Details = () => {
 
   
   return ( 
-    <div className='grid grid-cols-6 gap-5 p-3'>
+    <div className='grid md:grid-cols-3 lg:grid-cols-6 gap-5 w-full p-3'>
         
-<div className='ml-2  '>
-    <p className='text-[14px] capitalize text-dimfont'>sub project</p>
-    <p className="font-semibold text-[20px] text-[#696CFFDE] ">26</p>
+<div className='ml-2  flex items-center '>
+    <p className="font-semibold text-[35px] text-[#696CFFDE] ">26</p>
+    <p className='text-[14px] capitalize text-dimfont ml-2'>sub <br/> project</p>
         </div>
 
      
-<div className='ml-2'>
-    <p className='text-[14px] capitalize  text-dimfont'>SPAR Approved</p>
-    <p className="font-semibold text-[20px] text-[#696CFFDE] ">8</p>
+<div className='ml-2  flex items-center '>
+    <p className="font-semibold text-[35px] text-[#696CFFDE] ">8</p>
+    <p className='text-[14px] capitalize  text-dimfont ml-2'>SPAR <br/> Approved</p>
 </div>
         
        
-<div className='ml-2'>
-    <p className='text-[14px] capitalize text-dimfont'>DED Submitted</p>
-    <p className="font-semibold text-[20px] text-[#696CFFDE] ">10</p>
+<div className='ml-2  flex items-center'>
+    <p className="font-semibold text-[35px] text-[#696CFFDE] ">10</p>
+    <p className='text-[14px] capitalize ml-2 text-dimfont'>DED <br/> Submitted</p>
 </div>
       
        
-<div className='ml-2'>
-    <p className='text-[14px] capitalize text-dimfont'>Tender Eval Ongoing</p>
-    <p className="font-semibold text-[20px] text-[#696CFFDE] ">12</p>
+<div className='ml-2  flex items-center'>
+    <p className="font-semibold text-[35px] text-[#696CFFDE] ">12</p>
+    <p className='text-[14px] capitalize ml-2 text-dimfont'>Tender <br/>  Eval Ongoing</p>
 </div>
         
         
-<div className='ml-2'>
-    <p className='text-[14px] capitalize text-dimfont'>Agreement Completed</p>
-    <p className="font-semibold text-[20px] text-[#696CFFDE] ">5</p>
+<div className='ml-2  flex items-center'>
+    <p className="font-semibold text-[35px] text-[#696CFFDE] ">5</p>
+    <p className='text-[14px] capitalize ml-2 text-dimfont'>Agreement <br/> Completed</p>
 </div>
         
         
-<div className='ml-2'>
-    <p className='text-[14px] capitalize text-dimfont'>Physical Progress</p>
-    <p className="font-semibold text-[20px] text-[#696CFFDE] ">16</p>
+<div className='ml-2  flex items-center'>
+    <p className="font-semibold text-[35px] text-[#696CFFDE] ">16</p>
+    <p className='text-[14px] capitalize ml-2 text-dimfont'>Physical  <br/>Progress</p>
 </div>
     
     </div>
