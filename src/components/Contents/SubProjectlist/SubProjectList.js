@@ -26,7 +26,7 @@ const SubProjectList = () => {
 //   formBody.push(encodedKey + "=" + encodedValue);
 // }
 // formBody = formBody.join("&");
-  useEffect(() => {
+  // useEffect(() => {
   
   // fetch('https://aide.centerpointbd.xyz/token', {
   //   method: 'POST',
@@ -35,19 +35,38 @@ const SubProjectList = () => {
   //   },
   //   body: formBody
   // }).then(res => console.log(res))
-    fetch('https://aide.centerpointbd.xyz/api/subproject/getsubprojectlist', {
-    method: 'POST',
-    headers:{
-      'Content-Type': 'application/x-www-form-urlencoded'
-    },    
-    body: new URLSearchParams({
-        'Id': 0
+//     fetch('https://aide.centerpointbd.xyz/api/subproject/getsubprojectlist', {
+//     method: 'POST',
+//     headers:{
+//       'Content-Type': 'application/x-www-form-urlencoded'
+//     },    
+//     body: new URLSearchParams({
+//         'Id': 0
        
-    })
-}).then(res => res.json()).then(data => console.log(data)) 
-  }, [tableData])
+//     })
+// }).then(res => res.json()).then(data => console.log(data)) 
+//   }, [tableData])
   
   // console.log(data)
+  const [SubProject, setSubProject] = useState()
+  const getDataWithToken = async () => {
+    const response = await fetch('https:/aide.centerpointbd.xyz/api/subproject/getsubprojectlist', {
+        method: 'POST',
+        headers: {
+            'Content-type': 'application/json',
+            // 'Authorization': `Bearer ${token}`
+
+        },
+        body: JSON.stringify({ Id: 0 }),
+    });
+    const data = await response.json();
+    setSubProject(data.OBJ)
+
+};
+useEffect(() => {
+    getDataWithToken()
+}, [])
+console.log(SubProject)
   return (
     <div className='w-full'>
          <div className='flex justify-between py-2 px-4 mt-2 '>

@@ -37,7 +37,7 @@ const SideNav = () => {
         setHeight3(isOpened3 ? "0px" : `18vh`) 
       } 
 
-    const [isOpened4, setOpened4] = useState(false) 
+    const [isOpened4, setOpened4] = useState(true) 
     const [height4, setHeight4] = useState("0px")
     const HandleOpening4 = () => {
         setOpened4(!isOpened4)
@@ -59,7 +59,7 @@ const SideNav = () => {
         if(isOpened6 === true){
           setHeight4("52vh")
         }else{
-        setHeight4(isOpened4 ? "0px" : `24vh`) 
+        setHeight4("0px")  
         }
       }, [isOpened6])
       const allClose= () => {
@@ -280,7 +280,7 @@ const SideNav = () => {
   >
    <ul>
     <li className={`${!open && "hidden"} origin-left duration-200 text-[14px]   border-l-2 pl-3 ml-2`}> <Link to="/projectinfo">Project Info</Link> </li>
-    <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 mt-2  pl-3 ml-2`}> <Link to="/sparprogresslist">Project Cost</Link> </li>
+    <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 mt-2  pl-3 ml-2`}> <Link to="/projectcost">Project Cost</Link> </li>
     <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 mt-2 pl-3 ml-2`}> <Link to="/activity">ADP Allocation </Link></li>
     <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 mt-2 pl-3 ml-2`}> <Link to="/activity">Component </Link></li>
     <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 mt-2 pl-3 ml-2`}> <Link to="/activity">Component Monthly
