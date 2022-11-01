@@ -12,26 +12,29 @@ const Details = () => {
 //     .then(res => res.json())
 //     .then(data => console.log("data",data))
 //   }, []) 
-// const [products, setProducts] =useState([])
-// const token = `MzojeEKi1uk_iDCSWcYtWjQterZZMMBU0ecd8ko4biNezzWHjX5UxVf2cKEF1_20uicVE3USvGDKDfrWeOZJE3TzKtchI2jt-k6CsvcvExXMJKjaUYJzDFgVt4QHChuk-4xpnICzBcqBoxNjETBAiaeJMSr4Y7kQB7v-VarXR1nIfYlOqaaBk_fS0UOLXilEhKzQ9p0pY8ndcqQzV2GHgV0pnkzFikqB-CzclMvKujVTUvuD7P-HsNmpHhJb4ge-BTbOvk0iqtyn2E2U8EUAx7pdin6TXRL-WoKVgUnlheMX7D6ZV4NGw6rRI8rDA-yLXlJNS87I1cas2ZkQwcY0WCz1jzwukQFEsSDKIAoy-YX4XGy_HMijoYxLomqP3eMUiBgBss-5WXPySJSWJNoz_iKntVQHX-reR-23KcwnoZdy_XXjyIW0tHCo2fevAU80JxF4qd9AaR6cVBkH46X36fRPYwZx97aN4efFlXvm0emSajib`
-// const getDataWithToken = async () => {
-//     const response = await fetch('https://srvc.aide.com.bd/api/product/getproductsforhomepage', {
-//         method: 'POST',
-//         headers: {
-//             'Content-type': 'application/json',
-//             'Authorization': `Bearer ${token}`
+const [products, setProducts] =useState([])
+const token = `E0nR6rqMnAFigHkbE3RhzQNAg4E5IJPtukKydCDFcUFPaKtrIfUelyL4-kxZg50PkzYImWOs6rP34ZXbX1usO1QqorZ-uFcuL_wAkg5kvvWHdXtbsYRZplycv4BRzf9GNZ9c6O53hp6Y_Uy3XIBC0Iu_YxwcCPS2sknQm-zRkrck6Se5SHvpvnSLN6ViUdc6MSAjUYpV-wrFlOMiksPIHnJvADeySANWSgsn00KX87hYwHA0hBoJ-YC8SM8e5cTQYTWqQxy6dv4R0BnjJDo2RfJ4BrZ9-X8lFnrMYgGBXP7GlnXuuac8llUXQQH48fVaVJjUHc9xlKbWfucKv1Wx7yGtYlK4XzQ4aoFjILRKGuKwTzIryyVP4w-88Z3Un76T`
+const getDataWithToken = async () => {
+    const response = await fetch('https://aide.centerpointbd.xyz/api/subproject/dashboardsummary', { 
+     
+        method: 'GET',
+        headers: {
+            'Content-type': 'application/json',
+            'Authorization': `Bearer ${token}`
 
-//         },
-//         body: JSON.stringify({ UserId: 0 }),
-//     });
-//     const data = await response.json();
-//     setProducts(data)
-// };
-// useEffect(()=>{
-//     getDataWithToken()
-// },[])
+        },
 
-// console.log("products",products);
+
+})
+ 
+    const data = await response.json();
+    setProducts(data)
+};
+useEffect(()=>{
+    getDataWithToken() 
+},[])
+
+console.log("products",products);
   
 
   

@@ -45,7 +45,8 @@ const SubProjectPlanning = () => {
     </div>
   </div>
 </div>
-<div className="grid mt-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+<div className="grid mt-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
+<ProjectDetails/>
 <ProjectDetails/>
 <ProjectDetails/>
 <ProjectDetails/>

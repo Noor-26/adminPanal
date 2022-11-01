@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { GrSearch } from 'react-icons/gr'
 import { Link } from 'react-router-dom'
 import phoneImg from '../../../images/phone.png'
@@ -6,8 +6,48 @@ import ProjectTable from './ProjectTable/ProjectTable'
 import { HiPlus } from 'react-icons/hi';
 import { CiExport } from 'react-icons/ci';
 import { AiOutlinePrinter } from 'react-icons/ai';
+import axios from 'axios'
 
 const SubProjectList = () => {
+  const [tableData, settableData] = useState([])
+  // const {data} = axios.post('https://aide.centerpointbd.xyz/api/subproject/getsubprojectlist',{
+  //   "Id":0
+  // })
+//   var details = {
+//     'username': 'admin@pmes.gov.bd',
+//     'password': 'dcnup@dscc#123',
+//     'grant_type': 'password'
+// };
+
+// var formBody = [];
+// for (var property in details) {
+//   var encodedKey = encodeURIComponent(property);
+//   var encodedValue = encodeURIComponent(details[property]);
+//   formBody.push(encodedKey + "=" + encodedValue);
+// }
+// formBody = formBody.join("&");
+  useEffect(() => {
+  
+  // fetch('https://aide.centerpointbd.xyz/token', {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+  //   },
+  //   body: formBody
+  // }).then(res => console.log(res))
+    fetch('https://aide.centerpointbd.xyz/api/subproject/getsubprojectlist', {
+    method: 'POST',
+    headers:{
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },    
+    body: new URLSearchParams({
+        'Id': 0
+       
+    })
+}).then(res => res.json()).then(data => console.log(data)) 
+  }, [tableData])
+  
+  // console.log(data)
   return (
     <div className='w-full'>
          <div className='flex justify-between py-2 px-4 mt-2 '>

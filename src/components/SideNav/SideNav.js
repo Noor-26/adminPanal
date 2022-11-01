@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import { useState } from 'react';
 import Navber from '../Navber/Navber';
@@ -7,6 +7,7 @@ import Navber from '../Navber/Navber';
 import { MdOutlineDoubleArrow } from 'react-icons/md';
 import { SlHome } from 'react-icons/sl';
 import { FiActivity } from 'react-icons/fi';
+import { BsInfoCircle } from 'react-icons/bs';
 import { GoGraph } from 'react-icons/go';
 import { HiOutlineArrowTrendingUp } from 'react-icons/hi2'; 
 import { IoIosArrowForward,IoIosArrowDown } from 'react-icons/io'; 
@@ -40,7 +41,7 @@ const SideNav = () => {
     const [height4, setHeight4] = useState("0px")
     const HandleOpening4 = () => {
         setOpened4(!isOpened4)
-        setHeight4(isOpened4 ? "0px" : `18vh`) 
+        setHeight4(isOpened4 ? "0px" : `24vh`) 
       } 
     const [isOpened5, setOpened5] = useState(false) 
     const [height5, setHeight5] = useState("0px")
@@ -48,7 +49,19 @@ const SideNav = () => {
         setOpened5(!isOpened5)
         setHeight5(isOpened5 ? "0px" : `18vh`) 
       } 
-
+    const [isOpened6, setOpened6] = useState(false) 
+    const [height6, setHeight6] = useState("0px")
+    const HandleOpening6= () => {
+        setOpened6(!isOpened6)
+        setHeight6(isOpened6 ? "0px" : `26vh`) 
+      } 
+      useEffect(() => {
+        if(isOpened6 === true){
+          setHeight4("52vh")
+        }else{
+        setHeight4(isOpened4 ? "0px" : `24vh`) 
+        }
+      }, [isOpened6])
       const allClose= () => {
         setOpen(!open)
        
@@ -65,6 +78,12 @@ const SideNav = () => {
         setOpened5(false)
         setHeight5('0px')
       }
+      useEffect(() => {
+        if(isOpened6 === false){
+          setHeight4("20vh")
+        }
+      }, [isOpened6])
+      
   return (
     <div className="flex">
     <div onMouseEnter={() => setOpen(true)}
@@ -243,7 +262,36 @@ const SideNav = () => {
 
    
    </ul>
+   <div  className="  duration-200">
+  <div onClick={HandleOpening6} className="bg-[#F4F5FA] cursor-pointer p-4 flex items-center  justify-between  ">
+    <div className='flex items-center'>
+          <BsInfoCircle className='mx-2 text-[18px]'/>
+    
+    <h4 className={`${!open && "hidden"} origin-left duration-200 text-nav_font`}>DCNUP Info</h4>
+    </div>
+    <div className={` ${!open && "hidden"}  text-end`}>
+    
+    {isOpened6 ? < IoIosArrowDown/> :  <IoIosArrowForward />}
+    </div>
+  </div>
+  <div 
+    style={{ height: height6 }} 
+    className=" overflow-hidden mr-2 my-2 transition-all duration-500"
+  >
+   <ul>
+    <li className={`${!open && "hidden"} origin-left duration-200 text-[14px]   border-l-2 pl-3 ml-2`}> <Link to="/projectinfo">Project Info</Link> </li>
+    <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 mt-2  pl-3 ml-2`}> <Link to="/sparprogresslist">Project Cost</Link> </li>
+    <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 mt-2 pl-3 ml-2`}> <Link to="/activity">ADP Allocation </Link></li>
+    <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 mt-2 pl-3 ml-2`}> <Link to="/activity">Component </Link></li>
+    <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 mt-2 pl-3 ml-2`}> <Link to="/activity">Component Monthly
+Target </Link></li>
+    <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 mt-2 pl-3 ml-2`}> <Link to="/activity">Component Monthly Progress </Link></li>
 
+   
+   </ul>
+
+    </div>
+  </div> 
     </div>
   </div> 
       <div className={`${!open && "hidden"} origin-left duration-200 text-[13px] my-3 text-center text-dimfont divider`}>SETTINGS</div>

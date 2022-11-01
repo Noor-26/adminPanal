@@ -16,6 +16,7 @@ import DEDProgress from './components/Contents/DEDProgress/DEDProgress';
 import SBDProgress from './components/Contents/SBDProgress/SBDProgress';
 import SBDProgressList from './components/Contents/SBDProgress/SBDProgressList/SBDProgressList';
 import DEDProgressList from './components/Contents/DEDProgress/DEDProgressList/DEDProgressList';
+import ProjectInformation from './components/Contents/ProjectInformation/ProjectInformation';
 
 function App() {
   
@@ -39,6 +40,7 @@ function App() {
               <Route path='sbdprogress' element={<SBDProgress/>} />
               <Route path='sbdprogresslist' element={<SBDProgressList/>} />
               <Route path='activity' element={<Activity/>} />
+              <Route path='projectinfo' element={<ProjectInformation/>} />
               <Route path='manualmeworksheet' element={<Manualworksheet/>} />
               <Route path='presentstatus&milestone' element={<PresentStMl/>} />
               
