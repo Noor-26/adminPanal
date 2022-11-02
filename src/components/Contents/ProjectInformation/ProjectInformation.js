@@ -6,14 +6,14 @@ import infoImg from '../../../images/information.png'
 const ProjectInformation = () => {
   const gob = useRef()
   const ida = useRef()
-  const [totalValue, settotalValue] = useState()
+  const [totalValue, settotalValue] = useState(0)
   // useEffect(() => {
   // }, [gob,ida])
   const sum = () => {
-    const gobValue = parseInt( gob.current.value)
-    const idaValue = ida.current.value
+    const gobValue = parseInt(gob.current.value)
+    const idaValue = parseInt(ida.current.value)
 
-    console.log(  gobValue  + idaValue)
+    settotalValue(  gobValue  + idaValue || gobValue || idaValue || 0)
 
   }
   return (
@@ -109,10 +109,11 @@ const ProjectInformation = () => {
     <span className="label-text">Total</span>
   </label>
   <label className="input-group border ">
-    <input type="number" placeholder="Enter here" className="input  w-[15vw] focus:outline-none" />
+    <input type="number" value={totalValue} className="input  w-[15vw] focus:outline-none" />
   </label>
 </div>
 </div>
+        <button type='submit' className='bg-[#56CA00] text-white w-[254px] uppercase py-2 my-4 border-none rounded'>save</button>
         </div>
     </div>
   )

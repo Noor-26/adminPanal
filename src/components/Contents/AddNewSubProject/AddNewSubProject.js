@@ -66,12 +66,12 @@ const AddNewSubProject = () => {
   </label>
 </div>
     <div className='flex items-center'>
-          <div className="form-control  ">
+          <div className="form-control mr-5 ">
           <label className="label">
     <span className="label-text">Ward No.</span>
   </label>
   <label className="input-group border ">
-    <input type="text" placeholder="Enter ward no" className="input  w-[10vw] focus:outline-none" />
+    <input type="text" placeholder="Enter ward no" className="input  w-[20vw] focus:outline-none" />
   </label>
 </div>
 
@@ -81,10 +81,10 @@ const AddNewSubProject = () => {
   </label>
   <label className="input-group border ">
   
-    <input type="text" placeholder=" Enter Project Area" className="input  w-[15vw] focus:outline-none" />
+    <input type="text" placeholder=" Enter Project Area" className="input  w-[26vw] focus:outline-none" />
   </label>
 </div>
-<div className="form-control border relative top-[18px]">
+<div className="form-control border relative top-[18px] ">
 <select className="select w-[150px] focus:outline-none">
   <option disabled selected>Select</option>
   <option>Homer</option>
@@ -94,6 +94,27 @@ const AddNewSubProject = () => {
   <option>Maggie</option>
 </select>
 </div>
+ 
+          </div>
+    </div>
+    <div className='flex items-center my-4'>
+      <div>
+
+    <label className="label">
+    <span className="label-text">Sub Project Category / Type</span>
+  </label>
+<div className="form-control border ">
+<select className="select w-80 focus:outline-none"> 
+  <option disabled selected>Select Category</option>
+  <option>Homer</option>
+  <option>Marge</option> 
+  <option>Bart</option>
+  <option>Lisa</option>
+  <option>Maggie</option>
+</select>
+</div>
+      </div>
+ 
 <div className="form-control ml-3">
   <label className="label">
     <span className="label-text">USD Rate</span>
@@ -121,7 +142,7 @@ const AddNewSubProject = () => {
   </label>
 </div>
           </div>
-    </div>
+  
     <div className="form-control  ">
           <label className="label">
     <span className="label-text">Location Description</span>

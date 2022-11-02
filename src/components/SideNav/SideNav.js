@@ -37,7 +37,7 @@ const SideNav = () => {
         setHeight3(isOpened3 ? "0px" : `18vh`) 
       } 
 
-    const [isOpened4, setOpened4] = useState(true) 
+    const [isOpened4, setOpened4] = useState(false) 
     const [height4, setHeight4] = useState("0px")
     const HandleOpening4 = () => {
         setOpened4(!isOpened4)
@@ -54,14 +54,22 @@ const SideNav = () => {
     const HandleOpening6= () => {
         setOpened6(!isOpened6)
         setHeight6(isOpened6 ? "0px" : `26vh`) 
-      } 
-      useEffect(() => {
-        if(isOpened6 === true){
-          setHeight4("52vh")
+        if(isOpened6=== false){
+        setHeight4( `52vh`) 
+  
         }else{
-        setHeight4("0px")  
+        setHeight4(`24vh`) 
+
         }
-      }, [isOpened6])
+      } 
+     
+      // useEffect(() => {
+      //   if(isOpened6 === true){
+      //     setHeight4("52vh")
+      //   }else{
+      //   setHeight4("0px")  
+      //   }
+      // }, [isOpened6])
       const allClose= () => {
         setOpen(!open)
        
@@ -78,11 +86,11 @@ const SideNav = () => {
         setOpened5(false)
         setHeight5('0px')
       }
-      useEffect(() => {
-        if(isOpened6 === false){
-          setHeight4("20vh")
-        }
-      }, [isOpened6])
+      // useEffect(() => {
+      //   if(isOpened6 === false){
+      //     setHeight4(isOpened4 ? "0px" :"20vh")
+      //   }
+      // }, [isOpened6])
       
   return (
     <div className="flex">
@@ -201,8 +209,9 @@ const SideNav = () => {
     <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 pl-3 ml-2`}> <Link to="/sparprogresslist">SPAR Progress</Link> </li>
     <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 mt-2 pl-3 ml-2`}> <Link to="/dedprogresslist"> DED Progress </Link></li>
     <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 mt-2 pl-3 ml-2`}> <Link to="/sbdprogresslist">  SBD / BOQ  Progress </Link></li>
-    <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 mt-2 pl-3 ml-2`}>Procurement Progress</li>
-    <li className={`${!open && "hidden"} origin-left duration-200 text-[14px]  border-l-2 mt-2 pl-3 ml-2`}>Contract Progress</li>
+    <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 mt-2 pl-3 ml-2`}> <Link to="/procurement"> Procurement Progress </Link></li>
+    
+   
     <li className={`${!open && "hidden"} origin-left duration-200 text-[14px] border-l-2 mt-2 pl-3 ml-2`}>Constraction Progress</li>
    </ul>
 
